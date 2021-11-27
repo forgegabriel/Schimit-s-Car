@@ -1,177 +1,62 @@
-/*---RESET---*/
-*{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	font-family: Verdana;
-	text-decoration: none;
-	list-style: none;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+	--font-outfit: 'Outfit', sans-serif;
+	--font-roboto-slab: 'Roboto Slab', serif;
+	--cor-1: #e63946;
+	--cor-2: #f1faee;
+	--cor-claro: #a8dadc;
+	--cor-medio: #457b9d;
+	--cor-escuro: #1d3557;
+	--cor-black: black;
+	--cor-white: white;
+	font-family: var(--font-outfit);
 }
 
-.container{
+header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	width: 100%;
-	float: left;
-	padding: 3% 4%;
+	background-color: var(--cor-1);
+	position: sticky;
+
 }
 
-.texto-centro{
-	text-align: center;
-}
-
-body{
-	background-color: black;
-}
-
-/*---MENU---*/
-header{
-	background-color: #b33b3b;
-	width: 100%;
-}
-#logo{
-	padding: 3% 0 3% 0;
-	font-size: 2em;
-	color: yellow;
-	border-bottom: 1px solid white;
-}
-.menu-item{
-	border-bottom: 1px solid white;
+.logo a {
 	display: block;
-	font-size: 1.5em;
-	padding: 3%;
-}
-.menu-item a{
-	color: black;
+	padding: 15px 8px;
+	color: var(--cor-2);
+	text-decoration: none;
 }
 
-/*---MAIN---*/
-main{
-	float: left;
+.menu-icon {
+	padding: 11px;
+	margin-left: auto;
+}
+
+.menu-icon svg {
+	fill: var(--cor-2);
+	transform: scale(0.8);
+}
+
+#menu-nav {
 	width: 100%;
 }
-#tituloCards{
-	color: white;
-	border: 2px white solid;
-	border-radius: 14px;
-	text-align: center;
-	font-size: 1.7em;
-	padding: 3%;
-	margin: 3%;
+
+#menu-nav a {
+	display: block;
+	padding: 8px;
+	border-top: 1px solid var(--cor-2);
+	color: var(--cor-2);
+	text-decoration: none;
 }
 
-.carros{
-	margin: 3%;
-}
-.card{
-	color: white;
-	width: 100%;
-	border: 1px white solid;
-	border-radius: 14px 14px 14px 14px;
-	margin-bottom: 5%;
-}
-.card img{
-	width: 100%;
-	border-radius: 14px 14px 0 0;
-}
-.card a{
-	color: red;
+.fechado {
+	display: none;	
 }
 
-.nome{
-	margin: 0 0 0 3%;
-}
-.preco{
-	font-weight: bold;
-	font-size: 1.5em;
-	margin: 10% 0 5% 3%;
-}
-.ano{
-	font-size: 0.9em;
-	margin: 0 0 2% 3%;
-}
-.local{
-	text-align: center;
-	margin: 2%;
-}
-
-/*---RODAPÉ---*/
-footer{
-	background-color: #b33b3b;
-	font-size: 1.5em;
-}
-
-/*---TAMANHO TELAS---*/
-@media screen and (min-width: 768px){
-	#logo{
-		font-size: 3.5em;
-		font-weight: bold;
-	}
-	#tituloCards{
-		font-size: 3em;
-	}
-	.menu-item{
-		font-size: 1.5em;
-	}
-	.card{
-		width: 46%;
-		float: left;
-		margin: 2%;
-	}
-	.card h2{
-		font-size: 2em;
-	}
-	.card p{
-		font-size: 1.5em;
-	}
-	.rodape{
-		font-size: 2em;
-	}
-}
-@media screen and (min-width: 1200px){
-	main{
-		padding: 0 7% 0 6%;
-	}
-	#logo{
-		padding: 0;
-		border: none;
-		font-size: 1.6em;
-		text-align: left;
-		display: inline-block;
-	}
-	header{
-		padding:2% 2%;
-	}
-	nav{
-		float: right;
-	}
-	.menu-item{
-		padding: 0;
-		float: left;
-		border: none;
-		margin-right: 30px;
-	}
-	.menu-item a{
-		font-size: 1.1em;
-	}
-
-	#tituloCards{
-		margin-top: 1%;
-		padding: 10px;
-		border: 1px solid;
-		border-radius: 14px;
-		font-size: 2em;
-	}
-	.card{
-		width: 30%;
-		margin: 1% 1.6%;
-	}
-	footer{
-		padding: 0;
-	}
-	.container{
-		margin-top: 3%;
-		padding: 1.5%;
-	}
-	.rodape{
-		font-size: 1.5em;
-	}
+nav.ativo {
+	display: block;
 }
