@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 * {
 	--font-outfit: 'Outfit', sans-serif;
 	--font-roboto-slab: 'Roboto Slab', serif;
@@ -12,6 +9,11 @@
 	--cor-black: black;
 	--cor-white: white;
 	font-family: var(--font-outfit);
+}
+
+.corpo {
+	display: flex;
+	flex-direction: column;
 }
 
 header {
@@ -26,19 +28,22 @@ header {
 
 .logo a {
 	display: block;
-	padding: 15px 8px;
+	padding: 18px 0px 18px 8px;
 	color: var(--cor-2);
 	text-decoration: none;
+	font-size: 1.2em;
+	font-weight: 200;
+	letter-spacing: 0.5px;
 }
 
 .menu-icon {
-	padding: 11px;
+	padding: 16px 11px;
+	height: 100%;
 	margin-left: auto;
 }
 
 .menu-icon svg {
 	fill: var(--cor-2);
-	transform: scale(0.8);
 }
 
 #menu-nav {
@@ -54,9 +59,79 @@ header {
 }
 
 .fechado {
-	display: none;	
+	display: none;
 }
 
 nav.ativo {
 	display: block;
+}
+
+main {
+	margin-bottom: 10px;
+}
+
+main>h2 {
+	padding: 10px 20px;
+	font-size: 1.2em;
+	font-family: var(--font-roboto-slab);
+	font-weight: 500;
+	color: var(--cor-escuro);
+}
+
+.carros {
+	display: grid;
+	grid-template-columns: auto;
+	padding: 0 10px;
+	grid-row-gap: 10px;
+}
+
+.card {
+	position: relative;
+	overflow: hidden;
+	border-radius: 14px;
+	height: calc(40vw - 20px);
+	width: fit-content;
+}
+
+.card-gradient {
+	position: absolute;
+	width: 100%;
+	height: 20vw;
+	bottom: 0;
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+
+.card img {
+	margin-top: -40px;
+}
+
+.card a {
+	text-decoration: none;
+	color: var(--cor-2);
+}
+
+.card h3 {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 2em;
+	padding: 10px;
+}
+
+.card p {
+	display: none;
+}
+
+.rodape {
+	padding: 10px;
+	margin-top: auto;
+	width: 100%;
+	background-color: var(--cor-1);
+}
+
+.rodape p {
+	color: var(--cor-2);
+	font-family: var(--font-roboto-slab);
+	text-align: center;
+	font-size: 1.2em;
 }

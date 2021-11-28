@@ -5,75 +5,94 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Schimit's Car</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="css/minireset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<header>
-		<h1 class="logo"><a href="index.html">Schimit's Cars Re-Evolution</a></h1>
-		<div class="menu-icon" onclick="interageMenu()">
-			<svg viewBox="0 0 24 24" width="24px" height="24px">
-				<path d="M0 0h24v24H0V0z" fill="none" />
-				<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-			</svg>
-		</div>
-		<nav id="menu-nav" class="fechado">
-			<a href="#">Cadastrar-se</a>
-			<a
-				href="https://api.whatsapp.com/send?phone=5567991715388&text=Ol%C3%A1%20gostaria%20verificar%20a%20disponibilidade%20de%20um%20carro!">Contato</a>
-		</nav>
-	</header>
-
-	<main>
-		<h2>Categorias de carros</h2>
-		<div class="carros">
-			<div class="card">
-				<a href="leilao.html"><img src="img/leilao.png">
-					<h3>Leilão</h3>
-					<p>Carros comuns com algum potencial de economia.</p>
-				</a>
+	<div class="corpo">
+		<header>
+			<h1 class="logo"><a href="index.html">Schimit's Cars Re-Evolution</a></h1>
+			<div class="menu-icon" onclick="interageMenu()">
+				<svg viewBox="0 0 24 24" width="24px" height="24px">
+					<path d="M0 0h24v24H0V0z" fill="none" />
+					<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+				</svg>
 			</div>
+			<nav id="menu-nav" class="fechado">
+				<a href="#">Cadastrar-se</a>
+				<a
+					href="https://api.whatsapp.com/send?phone=5567991715388&text=Ol%C3%A1%20gostaria%20verificar%20a%20disponibilidade%20de%20um%20carro!">Contato</a>
+			</nav>
+		</header>
 
-			<div class="card">
-				<a href="usados.html"><img src="img/usado.jpg">
-					<h3>Usados</h3>
-					<p>Carros mais acessíveis e com uma boa quilometragem.</p>
-				</a>
-			</div>
+		<main>
+			<h2>Categorias de carros</h2>
+			<div class="carros">
+				<div class="card">
+					<a href="leilao.html">
+						<div class="card-gradient"></div>
+						<img src="img/leilao.png">
+						<h3>Leilão</h3>
+						<p>Carros comuns com algum potencial de economia.</p>
+					</a>
+				</div>
 
-			<div class="card">
-				<a href="semi.html"><img src="img/seminovo.jpg">
-					<h3>Semi-novos</h3>
-					<p>Carros pouco usados e relativamente barato.</p>
-				</a>
-			</div>
-			<div class="card">
-				<a href="novos.html"><img src="img/novo.png">
-					<h3>Novos</h3>
-					<p>Carros vindos direto da fábrica.</p>
-				</a>
-			</div>
+				<div class="card">
+					<a href="usados.html">
+						<div class="card-gradient"></div>
+						<img src="img/usado.jpg">
+						<h3>Usados</h3>
+						<p>Carros mais acessíveis e com uma boa quilometragem.</p>
+					</a>
+				</div>
 
-			<div class="card">
-				<a href="velhos.html"><img src="img/velho.jpg">
-					<h3>Antigos</h3>
-					<p>Carros que fizeram muita história e normalmente inteiros.</p>
-				</a>
-			</div>
+				<div class="card">
+					<a href="semi.html">
+						<div class="card-gradient"></div>
+						<img src="img/seminovo.jpg">
+						<h3>Semi-novos</h3>
+						<p>Carros pouco usados e relativamente barato.</p>
+					</a>
+				</div>
+				<div class="card">
+					<a href="novos.html">
+						<div class="card-gradient"></div>
+						<img src="img/novo.png">
+						<h3>Novos</h3>
+						<p>Carros vindos direto da fábrica.</p>
+					</a>
+				</div>
 
-			<div class="card">
-				<a href="importados.html"><img src="img/importado.jpg">
-					<h3>Importados</h3>
-					<p>Carros estilosos e extremamete exclusivos.</p>
-				</a>
-			</div>
-		</div>
-	</main>
+				<div class="card">
+					<a href="velhos.html">
+						<div class="card-gradient"></div>
+						<img src="img/velho.jpg">
+						<h3>Antigos</h3>
+						<p>Carros que fizeram muita história e ainda sobreviveram inteiro.</p>
+					</a>
+				</div>
 
-	<footer class="rodape">
-		<p>Copyright by Adriel Schimit</p>
-	</footer>
+				<div class="card">
+					<a href="importados.html">
+						<div class="card-gradient"></div>
+						<img src="img/importado.jpg">
+						<h3>Importados</h3>
+						<p>Carros estilosos e extremamete exclusivos.</p>
+					</a>
+				</div>
+			</div>
+		</main>
+
+		<footer class="rodape">
+			<p>Copyright by Adriel Schimit</p>
+		</footer>
+	</div>
 
 	<script>
 		function interageMenu() {
