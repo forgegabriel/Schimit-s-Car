@@ -5,61 +5,85 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Schimit's Car - Importados</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="css/minireset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<header>
-		<h1 class="logo"><a href="index.html">Schimit's Cars Re-Evolution</a></h1>
-		<div class="menu-icon" onclick="interageMenu()">
-			<svg viewBox="0 0 24 24" width="24px" height="24px">
-				<path d="M0 0h24v24H0V0z" fill="none" />
-				<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-			</svg>
-		</div>
-		<nav id="menu-nav" class="fechado">
-			<a href="#">Cadastrar-se</a>
-			<a
-				href="https://api.whatsapp.com/send?phone=5567991715388&text=Ol%C3%A1%20gostaria%20verificar%20a%20disponibilidade%20de%20um%20carro!">Contato</a>
-		</nav>
-	</header>
-
-	<main>
-		<h2 id="tituloCards">Carros Importados</h2>
-		<div class="carros">
-			<div class="card">
-				<img src="img/lambor.jpg">
-				<h3 class="nome">Lamborghini</h3>
-				<p class="preco">R$1.999.990</p>
-				<p class="ano">Entre em <a href="contato.html">contato</a></p>
-				<hr>
-				<p class="local">Exterior</p>
+	<div class="corpo">
+		<header>
+			<h1 class="logo"><a href="index.html">Schimit's Cars Re-Evolution</a></h1>
+			<div class="menu-icon" onclick="interageMenu()">
+				<svg viewBox="0 0 24 24" width="24px" height="24px">
+					<path d="M0 0h24v24H0V0z" fill="none" />
+					<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+				</svg>
 			</div>
+			<nav id="menu-nav" class="fechado">
+				<a href="#">Cadastrar-se</a>
+				<a
+					href="https://api.whatsapp.com/send?phone=5567991715388&text=Ol%C3%A1%20gostaria%20verificar%20a%20disponibilidade%20de%20um%20carro!">Contato</a>
+			</nav>
+		</header>
 
-			<div class="card">
-				<img src="img/porshe.jpg">
-				<h3 class="nome">Porshe</h3>
-				<p class="preco">R$480.000</p>
-				<p class="ano">Entre em <a href="contato.html">contato</a></p>
-				<hr>
-				<p class="local">Exterior</p>
+		<main>
+			<h2>Carros Importados</h2>
+			<div class="carros">
+				<div class="card">
+					<div class="card-gradient"></div>
+					<img src="img/lambor.jpg">
+					<div class="card-texto">
+						<h3 class="nome">Lamborghini</h3>
+						<p class="preco">R$1.999.990</p>
+						<p class="ano">Entre em <a href="contato.html">contato</a></p>
+						<hr>
+						<p class="local">Exterior</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-gradient"></div>
+					<img src="img/porshe.jpg">
+					<div class="card-texto">
+						<h3 class="nome">Porshe</h3>
+						<p class="preco">R$480.000</p>
+						<p class="ano">Entre em <a href="contato.html">contato</a></p>
+						<hr>
+						<p class="local">Exterior</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-gradient"></div>
+					<img src="img/tesla.jpg">
+					<div class="card-texto">
+						<h3 class="nome">Tesla</h3>
+						<p class="preco">R$870.000</p>
+						<p class="ano">Entre em <a href="contato.html">contato</a></p>
+						<hr>
+						<p class="local">Exterior</p>
+					</div>
+				</div>
 			</div>
+		</main>
 
-			<div class="card">
-				<img src="img/tesla.jpg">
-				<h3 class="nome">Tesla</h3>
-				<p class="preco">R$870.000</p>
-				<p class="ano">Entre em <a href="contato.html">contato</a></p>
-				<hr>
-				<p class="local">Exterior</p>
-			</div>
-		</div>
-	</main>
+		<footer class="rodape">
+			<p>Copyright by Adriel Schimit</p>
+		</footer>
+	</div>
 
-	<footer class="rodape">
-		<p>Copyright by Adriel Schimit</p>
-	</footer>
+	<script>
+		function interageMenu() {
+			var element = document.getElementById("menu-nav");
+			element.classList.toggle("ativo");
+		}
+	</script>
+
 </body>
 
 </html>

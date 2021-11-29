@@ -73,12 +73,10 @@ main {
 main>h2 {
 	padding: 10px 20px;
 	font-size: 1.2em;
-	font-family: var(--font-roboto-slab);
-	font-weight: 500;
-	color: var(--cor-escuro);
+	color: var(--cor-black);
 }
 
-.carros {
+.categorias, .carros {
 	display: grid;
 	grid-template-columns: auto;
 	padding: 0 10px;
@@ -93,33 +91,64 @@ main>h2 {
 	width: fit-content;
 }
 
-.card-gradient {
+.categorias .card-gradient {
 	position: absolute;
 	width: 100%;
-	height: 20vw;
+	height: 30vw;
 	bottom: 0;
 	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 }
 
-.card img {
+.categorias .card img {
 	margin-top: -40px;
 }
 
-.card a {
+.categorias .card a {
 	text-decoration: none;
 	color: var(--cor-2);
 }
 
-.card h3 {
+.categorias .card-texto {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	font-size: 2em;
 	padding: 10px;
+	color: var(--cor-2);
 }
 
-.card p {
+.categorias .card-texto h3 {
+	text-align: right;
+	font-weight: 600;
+	font-size: 2em;
+}
+
+.categorias .card-texto p {
+	font-family: var(--font-roboto-slab);
+	font-weight: 300;
+	text-align: right;
+}
+
+.carros .card {
+	display: flex;
+}
+
+.carros .card img {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: calc(50vw - 10px);
+	height: 100%;
+}
+
+.carros .card-gradient {
 	display: none;
+}
+
+.carros .card-texto {
+	display: inline-block;
+	width: calc(50vw - 10px);
+	background-color: var(--cor-white);
+
 }
 
 .rodape {

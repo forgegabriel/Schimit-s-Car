@@ -5,60 +5,85 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Schimit's Car - Leilão</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="css/minireset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<header>
-		<h1 class="logo"><a href="index.html">Schimit's Cars Re-Evolution</a></h1>
-		<div class="menu-icon" onclick="interageMenu()">
-			<svg viewBox="0 0 24 24" width="24px" height="24px">
-				<path d="M0 0h24v24H0V0z" fill="none" />
-				<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-			</svg>
-		</div>
-		<nav id="menu-nav" class="fechado">
-			<a href="#">Cadastrar-se</a>
-			<a
-				href="https://api.whatsapp.com/send?phone=5567991715388&text=Ol%C3%A1%20gostaria%20verificar%20a%20disponibilidade%20de%20um%20carro!">Contato</a>
-		</nav>
-	</header>
-
-	<main>
-		<h1 id="tituloCards">Carros para Leilão</h1>
-		<div class="carros">
-			<div class="card">
-				<img src="img/ZAFIRA.png">
-				<h3 class="nome">Zafira</h3>
-				<p class="preco">R$27.000</p>
-				<p class="ano">Entre em <a href="contato.html">contato</a></p>
-				<hr>
-				<p class="local">Três lagoas - MS</p>
+	<div class="corpo">
+		<header>
+			<h1 class="logo"><a href="index.html">Schimit's Cars Re-Evolution</a></h1>
+			<div class="menu-icon" onclick="interageMenu()">
+				<svg viewBox="0 0 24 24" width="24px" height="24px">
+					<path d="M0 0h24v24H0V0z" fill="none" />
+					<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+				</svg>
 			</div>
+			<nav id="menu-nav" class="fechado">
+				<a href="#">Cadastrar-se</a>
+				<a
+					href="https://api.whatsapp.com/send?phone=5567991715388&text=Ol%C3%A1%20gostaria%20verificar%20a%20disponibilidade%20de%20um%20carro!">Contato</a>
+			</nav>
+		</header>
 
-			<div class="card">
-				<img src="img/HILUX.png">
-				<h3 class="nome">Hilux</h3>
-				<p class="preco">R$59.000</p>
-				<p class="ano">Entre em <a href="contato.html">contato</a></p>
-				<hr>
-				<p class="local">Três lagoas - MS</p>
-			</div>
+		<main>
+			<h2>Carros para Leilão</h2>
+			<div class="carros">
+				<div class="card">
+					<div class="card-gradient"></div>
+					<img src="img/ZAFIRA.png">
+					<div class="card-texto">
+						<h3 class="nome">Zafira</h3>
+						<p class="preco">R$27.000</p>
+						<p class="ano">Entre em <a href="contato.html">contato</a></p>
+						<hr>
+						<p class="local">Três lagoas - MS</p>
+					</div>
+				</div>
 
-			<div class="card">
-				<img src="img/MERIVA.png">
-				<h3 class="nome">Meriva</h3>
-				<p class="preco">R$23.000</p>
-				<p class="ano">Entre em <a href="contato.html">contato</a></p>
-				<hr>
-				<p class="local">Três lagoas - MS</p>
+				<div class="card">
+					<div class="card-gradient"></div>
+					<img src="img/HILUX.png">
+					<div class="card-texto">
+						<h3 class="nome">Hilux</h3>
+						<p class="preco">R$59.000</p>
+						<p class="ano">Entre em <a href="contato.html">contato</a></p>
+						<hr>
+						<p class="local">Três lagoas - MS</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-gradient"></div>
+					<img src="img/MERIVA.png">
+					<div class="card-texto">
+						<h3 class="nome">Meriva</h3>
+						<p class="preco">R$23.000</p>
+						<p class="ano">Entre em <a href="contato.html">contato</a></p>
+						<hr>
+						<p class="local">Três lagoas - MS</p>
+					</div>
+				</div>
 			</div>
-		</div>
-	</main>
-	<footer class="container">
-		<p class="texto-centro rodape"> Copyright by Adriel Schimit</p>
-	</footer>
+		</main>
+
+		<footer class="rodape">
+			<p>Copyright by Adriel Schimit</p>
+		</footer>
+	</div>
+
+	<script>
+		function interageMenu() {
+			var element = document.getElementById("menu-nav");
+			element.classList.toggle("ativo");
+		}
+	</script>
+
 </body>
 
 </html>
