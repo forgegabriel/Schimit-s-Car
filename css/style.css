@@ -1,18 +1,21 @@
 * {
 	--font-outfit: 'Outfit', sans-serif;
 	--font-roboto-slab: 'Roboto Slab', serif;
-	--cor-1: #e63946;
-	--cor-2: #f1faee;
-	--cor-claro: #a8dadc;
-	--cor-medio: #457b9d;
-	--cor-escuro: #1d3557;
-	--cor-black: black;
-	--cor-white: white;
+	--cor-1: #e24242;
+	--cor-2: #ffeeeb;
+	--cor-escuro: #3b3e40;
+	--cor-black: #000;
+	--cor-white: #fff;
 	font-family: var(--font-outfit);
+}
+
+body {
+	background-color: var(--cor-escuro);
 }
 
 .corpo {
 	display: flex;
+	height: 100vh;
 	flex-direction: column;
 }
 
@@ -32,13 +35,12 @@ header {
 	color: var(--cor-2);
 	text-decoration: none;
 	font-size: 1.2em;
-	font-weight: 200;
+	font-weight: 400;
 	letter-spacing: 0.5px;
 }
 
 .menu-icon {
 	padding: 16px 11px;
-	height: 100%;
 	margin-left: auto;
 }
 
@@ -73,14 +75,14 @@ main {
 main>h2 {
 	padding: 10px 20px;
 	font-size: 1.2em;
-	color: var(--cor-black);
+	color: var(--cor-white);
 }
 
 .categorias, .carros {
 	display: grid;
 	grid-template-columns: auto;
 	padding: 0 10px;
-	grid-row-gap: 10px;
+	grid-gap: 10px;
 }
 
 .card {
@@ -88,32 +90,39 @@ main>h2 {
 	overflow: hidden;
 	border-radius: 14px;
 	height: calc(40vw - 20px);
-	width: fit-content;
+	width: 100%;
 }
 
 .categorias .card-gradient {
 	position: absolute;
+	z-index: 2;
 	width: 100%;
 	height: 30vw;
-	bottom: 0;
+	bottom: -2px;
 	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 }
 
 .categorias .card img {
-	margin-top: -40px;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
 }
 
 .categorias .card a {
 	text-decoration: none;
-	color: var(--cor-2);
+	color: var(--cor-white);
 }
 
 .categorias .card-texto {
 	position: absolute;
+	z-index: 3;
 	bottom: 0;
 	right: 0;
 	padding: 10px;
-	color: var(--cor-2);
+	color: var(--cor-white);
 }
 
 .categorias .card-texto h3 {
@@ -132,27 +141,86 @@ main>h2 {
 	display: flex;
 }
 
-.carros .card img {
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	width: calc(50vw - 10px);
+.carros .card-moldura {
+	position: relative;
+	width: calc(55vw - 10px);
 	height: 100%;
 }
 
-.carros .card-gradient {
+.carros .card-moldura img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: right;
+}
+
+.carros .card-moldura .card-gradient {
 	display: none;
 }
 
 .carros .card-texto {
-	display: inline-block;
-	width: calc(50vw - 10px);
+	display: flex;
+	flex-direction: column;
+	width: calc(45vw - 10px);
 	background-color: var(--cor-white);
+	color: var(--cor-black);
+}
 
+.carros .card-texto h3 {
+	padding: 0px 5px;
+	font-family: var(--font-outfit);
+	color: var(--cor-black);
+	font-weight: 600;
+	font-size: 7vw;
+	letter-spacing: 1px;
+}
+
+.carros .card-texto p {
+	padding: 0px 5px;
+	font-family: var(--font-roboto-slab);
+	color: var(--cor-escuro);
+	font-weight: 400;
+	font-size: 4.5vw;
+}
+
+.carros .card-texto a {
+	text-decoration: none;
+	padding: 0px 3px;
+	background-color: var(--cor-1);
+	color: var(--cor-white);
+}
+
+.carros .card-texto hr {
+	display: initial;
+	height: 1px;
+	border: 0px;
+	background-color: var(--cor-1);
+}
+
+.carros .card-texto .nome {
+	flex-grow: 2;
+	display: flex;
+	align-items: flex-end;
+}
+
+.carros .card-texto .preco {
+	flex-grow: 0;
+}
+
+.carros .card-texto .ano {
+	flex-grow: 2;
+}
+
+.carros .card-texto .local {
+	flex-grow: 0;
+	font-size: 4vw;
+	margin-top: -1px;
+	margin-bottom: 1px;
 }
 
 .rodape {
-	padding: 10px;
+	padding: 8px;
 	margin-top: auto;
 	width: 100%;
 	background-color: var(--cor-1);
@@ -162,5 +230,105 @@ main>h2 {
 	color: var(--cor-2);
 	font-family: var(--font-roboto-slab);
 	text-align: center;
-	font-size: 1.2em;
+}
+
+@media only screen and (min-width: 450px) {
+
+	.categorias, .carros {
+		grid-template-columns: auto auto;
+	}
+
+	.carros .card {
+		flex-direction: column;
+		height: max-content;
+	}
+
+	.carros .card-moldura {
+		height: 40vw;
+	}
+
+	.carros .card-texto {
+		width: 100%;
+		height: 100%;
+	}
+
+	.carros .card-texto hr {
+		margin-top: 10px;
+	}
+
+}
+
+@media only screen and (min-width: 650px) {
+
+	.menu-icon {
+		display: none;
+	}
+
+	#menu-nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		margin-left: auto;
+		width: auto;
+	}
+
+	#menu-nav a {
+		padding: 20px 8px;
+		border: none;
+	}
+
+	.categorias, .carros {
+		grid-template-columns: auto auto auto;
+	}
+	
+	.card {
+		height: 300px;
+	}
+
+	.carros .card-moldura img {
+		width: fit-content;
+		height: 200px;
+		object-position: center;
+		z-index: -1;
+	}
+
+	.carros .card-moldura {
+		height: 180px;
+	}
+
+	.carros .card-texto h3 {
+		font-size: 40px;
+	}
+
+	.carros .card-texto p {
+		font-size: 20px;
+	}
+
+	.carros .card-texto .local {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+
+	.categorias, .carros {
+		grid-template-columns: calc(25% - 10px) calc(25% - 10px) calc(25% - 10px) calc(25% - 10px);
+	}
+
+	.categorias .card-gradient {
+		height: 100px;
+	}
+}
+
+@media only screen and (min-width: 1120px) {
+
+	header {
+		padding: 0px calc(50vw - 550px);
+
+	}
+
+	main {
+		width: 1100px;
+		margin: 0px auto 10px;
+	}
 }
